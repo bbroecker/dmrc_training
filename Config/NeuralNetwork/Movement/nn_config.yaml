@@ -1,0 +1,63 @@
+neural_network:
+  dynamics:
+    max_velocity: 0.7
+    acceleration: 2.0
+    speed_limit: 0.7
+    damping_per_sec: 3.5
+    brake_per_sec: 15.0
+  sensors:
+    max_sensor_distance: 3.0
+  controls:
+    update_rate: 10.0
+  network:
+    init_scale: 0.1
+    init_constant: 0.1
+    logging_freq: 220.0
+    max_learning_rate: 0.0003
+    min_learning_rate: 0.0003
+    learning_rate_time: 10.0
+    max_grad_norm: 5
+    trace_length: 1
+    hidden_size_dense: [100, 100]
+    hidden_size_rnn: []
+        # max_epoch = 6
+        # max_max_epoch = 39
+    keep_prob: 1.0
+    lr_decay: 0.8
+    batch_size: 20
+    use_tanh_dense: [False, False]
+    use_tanh_rnn: []
+    buffer_size: 500000
+    forget_bias: 1.0
+    use_fp16: False
+    valid_batch_size: 100
+    epsilon_start: 0.80
+    epsilon_end: 0.15
+    epsilon_time: 35.0
+    epsilon: 0.80
+    gamma: 0.9
+    store_every_ts: 1
+    train_freq: 5
+    clamp: 5.0
+#    weight_folder: "/home/broecker/src/ros/swarm_avoid_ws/src/tf_nn_sim/src/tf_nn_sim/weights_save/dqn/single_real_angle_pre/batch/lr0.0007_rnn_dense_relu100_relu100__batch20_trace_length1_forget_bias1.0_init_value0.1_keep_prob1.0_double_q_off_QDQN_off_alpha0.9_beta0.1_AdamOptimizer_0/"
+#    weight_folder: "/home/broecker/src/cf_nn_weights/dqn/next_neighbour1/weights/"
+    weight_folder: None
+    log_folder: None
+    alpha: 0.9
+    beta: 0.1
+    use_QDQN: False
+    use_double_q: True
+    min_update_freq: 3.0
+    max_update_freq: 10.0
+    min_state_out: -1.0
+    max_state_out: 1.0
+    min_reward: -1.0
+    max_reward: 1.0
+    pre_train_episodes: 1
+    optimizer: "AdamOptimizer"
+    best_score: -99999999999.0
+    max_epoch: 1
+    min_history: 1
+    update_length: 1
+    use_angle_reward: False
+

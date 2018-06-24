@@ -1,0 +1,95 @@
+neural_network:
+  dynamics:
+    max_velocity: 0.7
+    acceleration: 2.0
+    damping_per_sec: 3.5
+  sensors:
+    max_sensor_distance: 3.0
+  controls:
+    update_rate: 7.5
+  network:
+    init_scale: 0.04419
+    init_constant: 0.1
+    logging_freq: 220.0
+#    max_learning_rate: 0.001
+    max_learning_rate: 0.0004
+#    min_learning_rate: 0.001
+    min_learning_rate: 0.0004
+    learning_rate_time: 120.0
+    max_grad_norm: 30
+    num_layers: 1
+    state_count: 6
+    trace_length: 40
+    min_history: 30
+    update_length: 10
+    accuracy_length: 10
+    hidden_size_dense: []
+    hidden_size_rnn: [512, 512]
+        # max_epoch = 6
+        # max_max_epoch = 39
+    keep_prob: 0.8
+    lr_decay: 0.8
+    batch_size: 30
+    use_tanh_rnn: [True,True]
+    use_tanh_dense: []
+    output_size: 16
+    buffer_size: 50000
+    forget_bias: 0.0
+    use_fp16: False
+    valid_batch_size: 300
+    store_every_ts: 1
+    train_freq: 5
+    clamp: 5.0
+    weight_folder: "./pretrained_weights/rnn/weights/"
+#    weight_folder: None
+    log_folder: None
+    min_x: -1.0
+    max_x: 1.0
+    min_y: -1.0
+    max_y: 1.0
+    min_update_freq: 3.0
+    max_update_freq: 10.0
+    pre_train_episodes: 10
+    optimizer: "RMSPropOptimizer"
+    best_result: 0.8
+    bucket_types: 2
+    t_bucketsize: [200, 200]
+
+
+#class AngleConfig_longrun_93percent_with_goal(object):
+#    # init_scale = 0.01
+#    init_scale = 0.04419
+#    # init_scale = 1.0
+#    max_learning_rate = 0.0004
+#    min_learning_rate = 0.0004
+#    learning_rate_time = 120.0
+#    max_grad_norm = 30
+#    num_layers = 2
+#    state_count = 6
+#    # state_count = 3
+#    trace_length = 50
+#    hidden_size_rnn = [512]
+#    hidden_size_dense = [256, 64, 16]
+#    # max_epoch = 6
+#    # max_max_epoch = 39
+#    keep_prob = 0.8
+#    lr_decay = 0.8
+#    batch_size = 30
+#    use_tanh_rnn = [True]
+#    use_tanh_dense = [True, True, True, True]
+#    buffer_size = 500000
+#    forget_bias = 0.0
+#    use_fp16 = False
+#    output_size = 16
+#    valid_batch_size = 300
+#    log_folder = None
+#    # weight_folder = None
+#    max_y = 1.0
+#    min_y = -1.0
+#    max_x = 1.0
+#    min_x = -1.0
+#    weight_folder = "/home/broecker/src/cf_nn_weights/rrn_dynamic/predict_angle/angle2/weights"
+#    # vocab_size = 10000
+#    # optimizer = "GradientDescentOptimizer"
+#    optimizer = "AdamOptimizer"
+#    best_result = 0.70

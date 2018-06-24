@@ -1,0 +1,13 @@
+#90 max angle
+#acc_vel 32.25 % acc_angle 75.5 %
+StateCfg:
+  inputs:
+    state_size: 2
+    params: [64, 64]
+    num_actions: 4
+  learning:
+    batch_size: 40
+    buffer_size: 100000
+#    buffer_size: 600000
+    observe_time: 60 #s
+    discount_factor: 0.99

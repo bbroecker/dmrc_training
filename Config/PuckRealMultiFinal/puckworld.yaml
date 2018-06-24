@@ -1,0 +1,54 @@
+Environment:
+  dynamics:
+    max_velocity: 0.7
+    acceleration: 2.0
+#    acceleration: 0.5
+#    damping_per_sec: 8.75
+#    damping_per_sec: 3.0
+#    damping_per_sec: 2.5
+#    damping_per_sec: 0.1
+    damping_per_sec: 3.5
+  world:
+    max_goal_distance: 2.0
+    goal_update_distance: 0.2
+    critical_radius: 0.4
+    drone_radius: 0.06
+    wall_size_x: 2.0
+    total_meter_x: 2.5
+    wall_size_y: 2.0
+    total_meter_y: 2.5
+    goal_update_steps: 1000
+    max_sensor_distance: 3.0
+#    max_sensor_distance: 2.0
+    num_drones: 2
+  controlls:
+    actions: [0.5, -0.5] #actions are for x and y except the -1 action(do nothing)
+#    actions: [0.5, -0.5] #actions are for x and y except the -1 action(do nothing)
+    update_rate: 5.0 #Hz
+#    update_rate: 12.5 #Hz
+#    update_rate: 60.0 #Hz
+  frontend:
+    area_pixel_x: 1600
+    debug_pixel_x: 600
+    area_pixel_y: 1600
+    debug_pixel_y: 1000
+  network:
+    num_episodes: 10000  # How many episodes of game environment to train network with.
+    # pre_train_steps = 10000 #How many steps of random actions before training begins.
+    pre_train_steps: 30  # How many steps of random actions before training begins.
+    max_epLength: 3000  # The max allowed length of our episode.
+    load_model: True  # Whether to load a saved model.
+    batch_freq: 1
+    training_freq: 1  # How often to perform a training step.
+    save_ep_rate: 10
+    # create lists to contain total rewards and steps per episodeNone
+    h_size: [1024, 1024]
+    batch_size: 60 #How many experiences to use for each training step.
+    gamma: .90  # Discount factor on the target Q-values
+    startE: 0.20  # Starting chance of random action
+    endE: 0.19  # Final chance of random action
+        # anneling_steps = 30000. #How many steps of training to reduce startE to endE.
+    anneling_steps: 1000.  # How many steps of training to reduce startE to endE.
+#    trace_length: 10  # How long each experience trace will be when training
+    trace_length: 8  # How long each experience trace will be when training
+    num_layers: 4

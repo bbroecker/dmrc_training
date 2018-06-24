@@ -1,0 +1,34 @@
+simulation:
+  world:
+#          self.speed_limit = cfg['world']['speed_limit']
+#        self.slow_down_min_speed = cfg['world']['slow_down_min_speed']
+#        self.slow_down_min_speed = cfg['world']['slow_down_min_speed']
+    speed_limit: 0.5
+    max_goal_distance: 2.0
+#    goal_update_distance: 0.12
+    goal_update_distance: 0.15
+    critical_radius: 0.4
+    slow_down_radius_max: 0.6
+    slow_down_radius_min: 0.3
+    slow_down_max: 0.30
+    slow_down_min: 0.10
+    drone_radius: 0.06
+    wall_size_x: 3.0
+    wall_size_y: 3.0
+    #span
+    span_x: 2.0
+    span_y: 2.0
+    #frontend
+    total_meter_x: 3.5
+    total_meter_y: 3.5
+    #seconds
+    goal_update_steps: 15
+    #seconds
+    max_epLength: 120
+    num_drones: 2
+  frontend:
+    area_pixel_x: 1000
+    debug_pixel_x: 600
+    area_pixel_y: 1000
+    debug_pixel_y: 1000
+
