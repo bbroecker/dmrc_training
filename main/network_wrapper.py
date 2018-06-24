@@ -4,7 +4,7 @@ from geometry_msgs.msg import PoseStamped
 
 import numpy as np
 
-from v2.particle_filter.particle_filter_nn import ParticleFilterNN, rotate_vel
+from main.particle_filter.particle_filter_nn import ParticleFilterNN, rotate_vel
 
 MAX_DISTANCE = 9999999999.9
 

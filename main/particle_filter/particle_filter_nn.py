@@ -6,7 +6,7 @@ import copy
 # from tf_nn_sim.v2.helper import wrap_angle
 import scipy.stats
 
-from v2.helper import wrap_angle
+from main.helper import wrap_angle
 
 
 class ParticleFilter2_5D_Cfg(object):

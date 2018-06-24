@@ -14,7 +14,7 @@ from Environments.PuckRealMultiFinal.Puckworld_Environment import PuckRealMultiw
 from networks.dqn import DQN
 from networks.rrn_cnn_multitask_join import GeneralRRNDiscreteModelMultitaskJointLoss
 from networks.rrn_dqn import DQN_RNN
-from v2.helper import translate, create_nn_folders
+from main.helper import translate, create_nn_folders
 
 FRONTEND_ACTIVE = True
 

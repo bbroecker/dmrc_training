@@ -5,7 +5,7 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.python.framework import ops
 
-from v2.helper import translate
+from main.helper import translate
 
 
 def np_mod(x, y):
