@@ -39,8 +39,6 @@ neural_network:
     store_every_ts: 1
     train_freq: 5
     clamp: 5.0
-#    weight_folder: "/home/broecker/src/ros/swarm_avoid_ws/src/tf_nn_sim/src/tf_nn_sim/weights_save/dqn/single_real_angle_pre/batch/lr0.0007_rnn_dense_relu100_relu100__batch20_trace_length1_forget_bias1.0_init_value0.1_keep_prob1.0_double_q_off_QDQN_off_alpha0.9_beta0.1_AdamOptimizer_0/"
-#    weight_folder: "/home/broecker/src/cf_nn_weights/dqn/next_neighbour1/weights/"
     weight_folder: None
     log_folder: None
     alpha: 0.9

@@ -242,7 +242,6 @@ class AngleConfig1(object):
     min_y = -1.0
     max_x = 1.0
     min_x = -1.0
-    # weight_folder = "/home/broecker/src/cf_nn_weights/rrn_dynamic/predict_angle/angle2/weights"
     weight_folder = None
     t_bucketsize = [200, 200]
     bucket_types = 2
@@ -361,7 +360,7 @@ if __name__ == '__main__':
     sim_cfg = SimulationConfig("../Config/Simulation/sim_config.yaml")
     sim_cfg.goal_update_distance = 0.2
     sim_cfg.num_drones = 2
-    # movement_cfg = NNConfigMovement("/home/broecker/src/cf_nn_weights/dqn/drqn_1/nn_config_drqn.yaml")
+
     movement_cfg = NNConfigMovement("./pretrained_weights/dqn/nn_config.yaml")
     movement_cfg.update_rate = 8.0
     env = PuckRealMultiworldFinal(movement_cfg, sim_cfg, FRONTEND_ACTIVE, training_goal=False)
@@ -381,9 +380,7 @@ if __name__ == '__main__':
     # angle_cfg_training = NNConfigAngle(
     #     "../../tf_nn_sim/Config/NeuralNetwork/Angle/nn_config_training_single_layer.yaml")
     angle_cfg_training = NNConfigAngle("./pretrained_weights/rnn/nn_config.yaml")
-    # "/home/broecker/src/cf_nn_weights/v2/angle_discrete/orientation_joint/rnn_1/nn_config.yaml"
     # angle_cfg_training = AngleConfig1()
-    # angle_cfg_training.weight_folder = "/home/broecker/src/ros/swarm_avoid_ws/src/tf_nn_sim/src/tf_nn_sim/v2/weights_save/rnn_dynamic/angle_discrete/batch/lr0.001_rnn_tanh512_tanh512_dense_batch30_trace_length50_update_length10_forget_bias0.0_init_value0.04419_keep_prob0.8_buffer_size1_RMSPropOptimizer_2"
     # angle_cfg_training.min_learning_rate = 0.001
     # angle_cfg_training.max_learning_rate = 0.001
     angle_cfg_predict = copy.copy(angle_cfg_training)

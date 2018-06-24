@@ -256,7 +256,6 @@ class AngleConfig1(object):
     min_y = -1.0
     max_x = 1.0
     min_x = -1.0
-    # weight_folder = "/home/broecker/src/cf_nn_weights/rrn_dynamic/predict_angle/angle2/weights"
     weight_folder = None
     t_bucketsize = [200, 200]
     bucket_types = 2
@@ -305,7 +304,6 @@ class AngleConfig2(object):
     min_y = -1.0
     max_x = 1.0
     min_x = -1.0
-    # weight_folder = "/home/broecker/src/cf_nn_weights/rrn_dynamic/predict_angle/angle2/weights"
     weight_folder = None
     t_bucketsize = [200, 200]
     bucket_types = 2
@@ -354,7 +352,6 @@ class AngleConfig3(object):
     min_y = -1.0
     max_x = 1.0
     min_x = -1.0
-    # weight_folder = "/home/broecker/src/cf_nn_weights/rrn_dynamic/predict_angle/angle2/weights"
     weight_folder = None
     t_bucketsize = [200, 200]
     bucket_types = 2
@@ -369,7 +366,6 @@ if __name__ == '__main__':
     # env = Puckworld()
     # env = PuckNormalMultiworld()
     sim_cfg = SimulationConfig("../Config/Simulation/sim_config.yaml")
-    # movement_cfg = NNConfigMovement("/home/broecker/src/cf_nn_weights/dqn/drqn_1/nn_config_drqn.yaml")
     movement_cfg_training = NNConfigMovement("./pretrained_weights/dqn/nn_config.yaml")
     env = PuckRealMultiworldFinal(movement_cfg_training, sim_cfg, FRONTEND_ACTIVE, training_goal=True)
     # pre_train_steps = 10000 #How many steps of random actions before training begins.
